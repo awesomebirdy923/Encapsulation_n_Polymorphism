@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import junit.framework.TestCase;
@@ -109,6 +110,26 @@ assertTrue(testDoctor.getPatients().size() == 3);
 		assertEquals(2, testDoctors.get(2).getPatients().size());
 	}
 
+	class Hospital{
+		
+	}
 
+	class Patient{}
+	
+	class Doctor{
+		List<Patient> patientsAssigned = new ArrayList<Patient>();
+		
+		public void assignPatient(Patient patient) {
+			patientsAssigned.add(patient);
+		}
+		
+	}
+	
+	class GeneralPractitioner extends Doctor{}
 
+	class Nurse extends Doctor{}
+	
+	class Surgeon extends Doctor{}
+	
 }
+
